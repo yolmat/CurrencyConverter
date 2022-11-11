@@ -10,7 +10,7 @@ O projeto ainda está em desenvolvimento e as próximas atualizações serão vo
 
 - [x] Concepção da ideia
 - [x] Criação do Designer no Figma
-- [ ] Criação do Javascript
+- [X] Criação do Javascript
 - [ ] Ligação do Javascript com API’s que trazem o valor exato das moedas
 - [ ] Criação do HTML e CSS
 - [ ] Ligação do Back-end com o Front-end do projeto
