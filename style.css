@@ -63,7 +63,6 @@ label h2 {
 
 input, select, button, option {
     width: 95%;
-    padding: .3rem;
     border: none;
 }
 
@@ -79,6 +78,16 @@ input, select {
 
 label button {
     background-color: #D0DE96;
-    border-radius: 15px;
+    border-radius: 5px;
     color: #FFFFFF;
+    padding: .3rem;
 }
+
+label button:hover {
+    opacity: 0.8;
+}
+
+label button:active {
+    opacity: 0.5;
+}
+
