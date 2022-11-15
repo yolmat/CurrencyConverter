@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="shortcut icon" type="image/png" href="./src/logo.png" />
+    <title>Currency Converter</title>
+  </head>
+
+  <!--Base Design: https://www.figma.com/file/rf7JcQBFS9igqWUA3N7LMK/Untitled?node-id=0%3A1&t=0xakQi6gNGusB8Er-1-->
+
+  <body>
+    <div class="container">
+      <header>
+        <img src="./src/Logo.png" class="logo" alt="Logo" />
+        <h1>Currency<br />Converter</h1>
+      </header>
+
+      <main>
+        <label>
+          <h2>Value</h2>
+          <input id="value" type="number" placeholder="10.000,00" />
+        </label>
+        <label>
+          <h2>From</h2>
+          <select id="currencySelectFrom">
+            <option>R$ Real</option>
+            <option>$ Dolar</option>
+            <option>€ Euro</option>
+          </select>
+        </label>
+        <label>
+          <h2>To</h2>
+          <select id="currencySelectTo">
+            <option>$ Dolar</option>
+            <option>R$ Real</option>
+            <option>€ Euro</option>
+          </select>
+        </label>
+        <label>
+          <h2>Convert</h2>
+          <button id="converter">Click here</button>
+        </label>
+        <section>
+          <article class="currencyContainer currencyFrom">
+            <img id="countryMoneyFrom" src="./src/Real.svg" class="countryMoney" />
+            <p id="convertFrom">R$ 0,00</p>
+          </article>
+
+          <img src="./src/Arrow.svg" class="arrow" alt="arrow" />
+
+          <article class="currencyContainer currencyTo">
+            <img id="countryMoneyTo" src="./src/Dolar.svg" class="countryMoney" />
+            <p id="convertTo">$ 0,00</p>
+          </article>
+        </section>
+      </main>
+    </div>
+  </body>
+  
+  <script src="./script.js">
+  </script>
+</html>
