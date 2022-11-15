@@ -1,8 +1,20 @@
 # CurrencyConverter
 
-<a href=""><img src="https://img.shields.io/website-up-down-green-red/http/monip.org.svg">  :smiley: Teste voce mesmo || Test it yourself</a>
+<a href="https://yolmat.github.io/CurrencyConverter/"><img src="https://img.shields.io/website-up-down-green-red/http/monip.org.svg">  :smiley: Teste voce mesmo || Test it yourself</a>
+
+<h1>CARREGANDO IMAGENS ;-; (falta tirar)</h1>
 
 Para ver o Design <a href="https://www.figma.com/file/rf7JcQBFS9igqWUA3N7LMK/Design-currency-converter?node-id=0%3A1" target="_blank"> Aperte Aqui </a>
+
+Acompanhe a mapa mental desse projeto <a href="https://futuristic-stop-7c4.notion.site/Converto-De-Dinheiro-f9a7a044abce4ebebdde313061653c71" targt='_blank'> Apertando Aqui </a>
+
+### Motivo do projeto
+
+Continuar a evolução das minhas habilidades em HTML CSS
+
+Fortificar consumo de APIS dentro de projetos
+
+Reponsividade na pratica, projeto feito com base no First-mobile
 
 ### Trajetoria do projeto
 
@@ -11,10 +23,11 @@ O projeto ainda está em desenvolvimento e as próximas atualizações serão vo
 - [x] Concepção da ideia
 - [x] Criação do Designer no Figma
 - [X] Criação do Javascript
-- [ ] Ligação do Javascript com API’s que trazem o valor exato das moedas
+- [X] Ligação do Javascript com API’s que trazem o valor exato das moedas
 - [X] Criação do HTML e CSS
-- [ ] Ligação do Back-end com o Front-end do projeto
-- [ ] Projeto sendo colocado no ar
+- [X] Ligação do Back-end com o Front-end do projeto
+- [X] Projeto sendo colocado no ar
+- [ ] Reponsividade com computadores e notebooks
 
 ## 🤝 Colaboradores
 
@@ -24,7 +37,7 @@ Agradecemos às seguintes pessoas que contribuíram para este projeto:
   <tr>
     <td align="center">
       <a href="www.github.com/yolmat">
-        <img src="./GitImg/Yolmat.jpg" width="100px;" alt="Foto do yolmat no GitHub"/><br>
+        <img src='https://avatars.githubusercontent.com/u/89895630?s=400&u=281147a90961865bd1173ca35522a17a0ddef65f&v=4' width="100px;" alt="Foto do yolmat no GitHub"/><br>
         <sub>
           <b>Yolmat</b>
         </sub>
