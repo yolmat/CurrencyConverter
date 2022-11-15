@@ -33,7 +33,7 @@
           <h2>From</h2>
           <select id="currencySelectFrom">
             <option>R$ Real</option>
-            <option>US$ Dolar</option>
+            <option>$ Dolar</option>
             <option>€ Euro</option>
             <option>₿ BitCoin</option>
             <option>Ξ Ethereum</option>
@@ -42,7 +42,7 @@
         <label>
           <h2>To</h2>
           <select id="currencySelectTo">
-            <option>US$ Dolar</option>
+            <option>$ Dolar</option>
             <option>R$ Real</option>
             <option>€ Euro</option>
             <option>₿ BitCoin</option>
@@ -50,23 +50,26 @@
           </select>
         </label>
         <label>
-            <h2>Convert</h2>
-            <button>Click here</button>
+          <h2>Convert</h2>
+          <button id="converter">Click here</button>
         </label>
         <section>
-            <article class="currencyContainer currencyFrom">
-                <img src="./src/Real.svg" class="countryMoney">
-                <p>$ 0,00</p>
-            </article>
+          <article class="currencyContainer currencyFrom">
+            <img src="./src/Real.svg" class="countryMoney" />
+            <p id="convertFrom">R$ 0,00</p>
+          </article>
 
-            <img src="./src/Arrow.svg" class="arrow" alt="arrow">
+          <img src="./src/Arrow.svg" class="arrow" alt="arrow" />
 
-            <article class="currencyContainer currencyTo">
-                <img src="./src/Dolar.svg" class="countryMoney">
-                <p>US$ 0,00</p>
-            </article>
+          <article class="currencyContainer currencyTo">
+            <img src="./src/Dolar.svg" class="countryMoney" />
+            <p id="convertTo">$ 0,00</p>
+          </article>
         </section>
       </main>
     </div>
   </body>
+  
+  <script src="./script.js">
+  </script>
 </html>
