@@ -2,7 +2,7 @@
 const buttonConverter = document.getElementById('converter')
 
 // Função para converter
-const converter = () => {
+const converter = async () => {
     // Buscando elementos necessarios
     const input = document.getElementById('value').value
     const selectFrom = document.getElementById('currencySelectFrom')
@@ -23,6 +23,26 @@ const converter = () => {
     const euro = '€ Euro'
     const bitCoin = '₿ BitCoin'
     const ethereum = 'Ξ Ethereum'
+
+    // pegando dados ds API
+
+    //Real
+
+    const presentRealDolar = await fetch('https://economia.awesomeapi.com.br/last/BRL-USD').then(response => response.json())
+    const presentRealEuro = await fetch('https://economia.awesomeapi.com.br/last/BRL-EUR').then(response => response.json())
+    const presentRealBitCoin = await fetch('https://economia.awesomeapi.com.br/last/BTC-BRL').then(response => response.json())
+    const presentRealEthereum = await fetch('https://economia.awesomeapi.com.br/last/ETH-BRL').then(response => response.json())
+
+    //Dolar
+
+    const presentDolarEuro = await fetch('https://economia.awesomeapi.com.br/last/USD-EUR').then(response => response.json())
+    const presentDolarBitCoin = await fetch('https://economia.awesomeapi.com.br/last/BTC-USD').then(response => response.json())
+    const presentDolarEthereum = await fetch('https://economia.awesomeapi.com.br/last/ETH-USD').then(response => response.json())
+
+    //Euro
+
+    const presentEuroBitCoin = await fetch('https://economia.awesomeapi.com.br/last/BTC-EUR').then(response => response.json())
+    const presentEuroEthereum = await fetch('https://economia.awesomeapi.com.br/last/ETH-EUR').then(response => response.json())
 
     // Procurando as converções
 
@@ -107,7 +127,7 @@ const converter = () => {
     } 
     
     else if (optionFrom === bitCoin && optionTo === ethereum) {
-        valueTo = 5000 //ethereum
+        window.alert('Infelizmente ainda não estamos fazendo essa conversão :(')
     }
     // conversão do ethereum
     
@@ -124,7 +144,7 @@ const converter = () => {
     } 
     
     else if (optionFrom === ethereum && optionTo === bitCoin) {
-        valueTo = 10000 //bitCoin
+        window.alert('Infelizmente ainda não estamos fazendo essa conversão :(')
     } 
     
     else if (optionFrom === ethereum && optionTo === ethereum) {
