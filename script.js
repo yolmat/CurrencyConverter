@@ -11,18 +11,18 @@ const converter = async () => {
     const textTo = document.getElementById('convertTo')
 
     // Adicionando let's com os valores que seram convertidos
-    const valueFrom = 1
+    const valueFrom = input
     let valueTo = 0
 
     // Buscando saber quem vai ser chamado
     let optionFrom = selectFrom.value
     let optionTo = selectTo.value
 
+    let result = 0
+
     const real = 'R$ Real'
     const dolar = '$ Dolar'
     const euro = '€ Euro'
-    const bitCoin = '₿ BitCoin'
-    const ethereum = 'Ξ Ethereum'
 
     // pegando dados ds API
 
@@ -30,128 +30,81 @@ const converter = async () => {
 
     const presentRealDolar = await fetch('https://economia.awesomeapi.com.br/last/BRL-USD').then(response => response.json())
     const presentRealEuro = await fetch('https://economia.awesomeapi.com.br/last/BRL-EUR').then(response => response.json())
-    const presentRealBitCoin = await fetch('https://economia.awesomeapi.com.br/last/BTC-BRL').then(response => response.json())
-    const presentRealEthereum = await fetch('https://economia.awesomeapi.com.br/last/ETH-BRL').then(response => response.json())
 
     //Dolar
 
+    const presentDolarReal = await fetch('https://economia.awesomeapi.com.br/last/USD-BRL').then(response => response.json())
     const presentDolarEuro = await fetch('https://economia.awesomeapi.com.br/last/USD-EUR').then(response => response.json())
-    const presentDolarBitCoin = await fetch('https://economia.awesomeapi.com.br/last/BTC-USD').then(response => response.json())
-    const presentDolarEthereum = await fetch('https://economia.awesomeapi.com.br/last/ETH-USD').then(response => response.json())
 
     //Euro
 
-    const presentEuroBitCoin = await fetch('https://economia.awesomeapi.com.br/last/BTC-EUR').then(response => response.json())
-    const presentEuroEthereum = await fetch('https://economia.awesomeapi.com.br/last/ETH-EUR').then(response => response.json())
+    const presentEuroReal = await fetch('https://economia.awesomeapi.com.br/last/EUR-BRL').then(response => response.json())
+    const presentEuroDolar = await fetch('https://economia.awesomeapi.com.br/last/EUR-USD').then(response => response.json())
 
     // Procurando as converções
 
+    const valueRealDolar = presentRealDolar.BRLUSD.high
+    const valueDolarReal = presentDolarReal.USDBRL.high
+
+    const valueRealEuro = presentRealEuro.BRLEUR.high
+    const valueEuroReal = presentEuroReal.EURBRL.high
+
+    const valueDolarEuro = presentDolarEuro.USDEUR.high
+    const valueEuroDolar = presentEuroDolar.EURUSD.high
+
+
     // Conversão do real
     if (optionFrom === real && optionTo === dolar) {
-        valueTo = 5 //dolar
+        valueTo = valueRealDolar //dolar
+        console.log(valueTo)
     } 
     
     else if (optionFrom === real && optionTo === real) {
         valueTo = 1 //real
+        console.log(valueTo)
     } 
     
     else if (optionFrom === real && optionTo === euro) {
-        valueTo = 4 //euro
+        valueTo = valueRealEuro //euro
+        console.log(valueTo)
     } 
     
-    else if (optionFrom === real && optionTo === bitCoin) {
-        valueTo = 10000 //bitCoin
-    } 
-    
-    else if (optionFrom === real && optionTo === ethereum) {
-        valueTo = 5000 //ethereum
-    }
     // conversão do dolar
     
     else if (optionFrom === dolar && optionTo === dolar) {
-        valueTo = 1 //dolar
+        valueTo = 1 //real
+        console.log(valueTo)
     } 
     
     else if (optionFrom === dolar && optionTo === real) {
-        valueTo = 0.5 //real
+        valueTo = valueDolarReal //dolar
+        console.log(valueTo)
     } 
     
     else if (optionFrom === dolar && optionTo === euro) {
-        valueTo = 1.5 //euro
+        valueTo = valueDolarEuro //euro
+        console.log(valueTo)
     } 
     
-    else if (optionFrom === dolar && optionTo === bitCoin) {
-        valueTo = 10000 //bitCoin
-    } 
-    
-    else if (optionFrom === dolar && optionTo === ethereum) {
-        valueTo = 5000 //ethereum
-    }
     // conversão do euro
     
     else if (optionFrom === euro && optionTo === dolar) {
-        valueTo = 1 //dolar
+        valueTo = valueEuroDolar //dolar
+        console.log(valueTo)
     } 
     
     else if (optionFrom === euro && optionTo === real) {
-        valueTo = 0.5 //real
+        valueTo = valueEuroReal //real
+        console.log(valueTo)
     } 
     
     else if (optionFrom === euro && optionTo === euro) {
-        valueTo = 1.5 //euro
+        valueTo = 1 //euro
+        console.log(valueTo)
     } 
     
-    else if (optionFrom === euro && optionTo === bitCoin) {
-        valueTo = 10000 //bitCoin
-    } 
-    
-    else if (optionFrom === euro && optionTo === ethereum) {
-        valueTo = 5000 //ethereum
-    }
-    // conversão do bitCoin
-    
-    else if (optionFrom === bitCoin && optionTo === dolar) {
-        valueTo = 1 //dolar
-    } 
-    
-    else if (optionFrom === bitCoin && optionTo === real) {
-        valueTo = 0.5 //real
-    } 
-    
-    else if (optionFrom === bitCoin && optionTo === euro) {
-        valueTo = 1.5 //euro
-    } 
-    
-    else if (optionFrom === bitCoin && optionTo === bitCoin) {
-        valueTo = 10000 //bitCoin
-    } 
-    
-    else if (optionFrom === bitCoin && optionTo === ethereum) {
-        window.alert('Infelizmente ainda não estamos fazendo essa conversão :(')
-    }
-    // conversão do ethereum
-    
-    else if (optionFrom === ethereum && optionTo === dolar) {
-        valueTo = 1 //dolar
-    } 
-    
-    else if (optionFrom === ethereum && optionTo === real) {
-        valueTo = 0.5 //real
-    } 
-    
-    else if (optionFrom === ethereum && optionTo === euro) {
-        valueTo = 1.5 //euro
-    } 
-    
-    else if (optionFrom === ethereum && optionTo === bitCoin) {
-        window.alert('Infelizmente ainda não estamos fazendo essa conversão :(')
-    } 
-    
-    else if (optionFrom === ethereum && optionTo === ethereum) {
-        valueTo = 5000 //ethereum
-    }
+    result = valueTo * valueFrom 
 
-    const result = input * valueFrom / valueTo
 
     // Mudando o texto TO
 
@@ -174,17 +127,6 @@ const converter = async () => {
        }).format(result)
     }
 
-    if (optionTo === bitCoin) {
-        const valueBitCoin = 1000000000000
-        textTo.innerHTML = (input/valueBitCoin).toFixed(7)
-    }
-
-    if (optionTo === ethereum) {
-        const valueEthereum = 1000000000000
-        textFrom.innerHTML = (input/valueEthereum).toFixed(6)
-    }
-
-
     // Mudando o texto FROM
 
     if (optionFrom === real) {
@@ -204,16 +146,6 @@ const converter = async () => {
             style: 'currency', currency: 'EUR'
         }).format(input)
     }
-
-    if (optionFrom == bitCoin) {
-        const valueBitCoin = 1000000000000
-        textFrom.innerHTML = (input/valueBitCoin).toFixed(7)
-    }
-
-    if (optionFrom == ethereum) {
-        const valueEthereum = 1000000000000
-        textFrom.innerHTML = (input/valueEthereum).toFixed(6)
-    }    
 }
 
 buttonConverter.addEventListener('click', converter)
