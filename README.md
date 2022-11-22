@@ -29,7 +29,7 @@ O projeto ainda está em desenvolvimento e as próximas atualizações serão vo
 - [X] Criação do HTML e CSS
 - [X] Ligação do Back-end com o Front-end do projeto
 - [X] Projeto sendo colocado no ar
-- [ ] Reponsividade com computadores e notebooks
+- [X] Reponsividade com computadores e notebooks
 
 ## 🤝 Colaboradores
 
