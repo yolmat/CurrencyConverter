@@ -2,7 +2,9 @@
 
 <a href="https://yolmat.github.io/CurrencyConverter/"><img src="https://img.shields.io/website-up-down-green-red/http/monip.org.svg">  :smiley: Teste voce mesmo || Test it yourself</a>
 
-<h1>CARREGANDO IMAGENS ;-; (falta tirar)</h1>
+<h2>Desktop</h2><img width="100%" src="./gitImg/Desktop.jpeg">
+
+<h2>Mobile</h2><img width="50%" src="./gitImg/Mobile.jpeg">
 
 Para ver o Design <a href="https://www.figma.com/file/rf7JcQBFS9igqWUA3N7LMK/Design-currency-converter?node-id=0%3A1" target="_blank"> Aperte Aqui </a>
 
