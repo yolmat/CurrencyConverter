@@ -23,9 +23,7 @@ Reponsividade na pratica, projeto feito com base no First-mobile
 O projeto ainda está em desenvolvimento e as próximas atualizações serão voltadas nas seguintes tarefas:
 
 - [x] Concepção da ideia
-- [x] Criação do Designer no Figma
 - [X] Criação do Javascript
-- [X] Ligação do Javascript com API’s que trazem o valor exato das moedas
 - [X] Criação do HTML e CSS
 - [X] Ligação do Back-end com o Front-end do projeto
 - [X] Projeto sendo colocado no ar
